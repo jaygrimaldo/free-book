@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE Book: How to Sell Your Home Fast for Top Dollar | J.R. Grimaldo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #1a7a6c;
+            --dark-green: #145c52;
+            --light-green: #e8f5f2;
+            --accent-orange: #e8762a;
+            --accent-orange-hover: #d66820;
+            --text-dark: #2c3e50;
+            --text-medium: #5a6a7a;
+            --white: #ffffff;
+            --off-white: #f8fafb;
+            --shadow: 0 10px 40px rgba(0,0,0,0.12);
+            --shadow-sm: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--off-white) 50%, var(--white) 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .book-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .free-badge {
+            background: var(--accent-orange);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .book-image {
+            max-width: 320px;
+            width: 100%;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.25));
+            transition: transform 0.3s ease;
+        }
+
+        .book-image:hover {
+            transform: scale(1.03) rotate(-1deg);
+        }
+
+        .form-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-section h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 32px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .form-section h1 span {
+            color: var(--primary-green);
+        }
+
+        .form-section .subtitle {
+            font-size: 17px;
+            color: var(--text-medium);
+            margin-bottom: 25px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .benefit-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .benefit-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .form-group input {
+            padding: 14px 16px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 4px rgba(26, 122, 108, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: #a0aec0;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media (max-width: 500px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .submit-btn {
+            background: var(--accent-orange);
+            color: white;
+            padding: 18px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-orange-hover);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .privacy-note {
+            font-size: 12px;
+            color: var(--text-medium);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .author-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #e8eef3;
+        }
+
+        .author-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-green);
+        }
+
+        .author-info h3 {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
+
+        .author-info p {
+            font-size: 13px;
+            color: var(--text-medium);
+        }
+
+        .thank-you {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .thank-you.show {
+            display: block;
+        }
+
+        .thank-you h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .thank-you p {
+            font-size: 17px;
+            color: var(--text-medium);
+        }
+
+        .form-content.hide {
+            display: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-medium);
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="book-section">
+                <div class="free-badge">100% Free</div>
+                <img src="3dbook.png" alt="How to Sell Homes Fast for Top Dollar - Free Book by J.R. Grimaldo" class="book-image">
+            </div>
+
+            <div class="form-section">
+                <div class="form-content">
+                    <h1>Get Your <span>FREE</span> Copy</h1>
+                    <p class="subtitle">Discover the insider secrets to selling your home quickly and for the highest possible price.</p>
+
+                    <ul class="benefit-list">
+                        <li>How to price your home to attract serious buyers</li>
+                        <li>Simple upgrades that boost your home's value</li>
+                        <li>Avoid costly mistakes that kill deals</li>
+                        <li>Negotiation strategies that put more money in your pocket</li>
+                    </ul>
+
+                    <!-- IMPORTANT: Replace YOUR_FORMSPREE_ID with your actual Formspree form ID -->
+                    <form action="https://formspree.io/f/xdazyvng" method="POST" id="bookForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(864) 555-1234" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Mailing Address</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main St, Landrum, SC 29356" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Send Me The Free Book</button>
+
+                        <p class="privacy-note">🔒 Your information is secure and will never be shared.</p>
+                    </form>
+
+                    <div class="author-section">
+                        <img src="headshot.jpg" alt="J.R. Grimaldo" class="author-photo">
+                        <div class="author-info">
+                            <h3>J.R. Grimaldo</h3>
+                            <p>Licensed Real Estate Professional<br>Serving Landrum, Greenville & Upstate SC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="thank-you" id="thankYou">
+                    <h2>Thank You!</h2>
+                    <p>Your free book is on its way! I'll personally deliver it to you soon. Keep an eye on your inbox for a confirmation email.</p>
+                    <br>
+                    <p><strong>— J.R. Grimaldo</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 J.R. Grimaldo, Licensed Real Estate Professional | <a href="tel:864-381-2326">864-381-2326</a>
+    </footer>
+
+    <script>
+        // Handle form submission with thank you message
+        document.getElementById('bookForm').addEventListener('submit', function(e) {
+            // Allow form to submit to Formspree, then show thank you
+            setTimeout(function() {
+                document.querySelector('.form-content').classList.add('hide');
+                document.getElementById('thankYou').classList.add('show');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
